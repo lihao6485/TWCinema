@@ -7,11 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F687E670214A08B200171D40 /* ConfigurationStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E66F214A08B200171D40 /* ConfigurationStorageTests.swift */; };
+		F687E672214A0B6500171D40 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F687E671214A0B6500171D40 /* RxTest.framework */; };
+		F687E675214A0FEB00171D40 /* ConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E674214A0FEB00171D40 /* ConfigurationRepository.swift */; };
+		F687E677214A109300171D40 /* ConfigurationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E676214A109300171D40 /* ConfigurationService.swift */; };
 		F6EE37B8214961AC008979A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE37B7214961AC008979A5 /* AppDelegate.swift */; };
 		F6EE37BF214961AD008979A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6EE37BE214961AD008979A5 /* Assets.xcassets */; };
 		F6EE37CD214961AD008979A5 /* TWCinemaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE37CC214961AD008979A5 /* TWCinemaTests.swift */; };
 		F6EE37D8214961AD008979A5 /* TWCinemaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE37D7214961AD008979A5 /* TWCinemaUITests.swift */; };
 		F6EE37ED21496346008979A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE37EC21496346008979A5 /* MainViewController.swift */; };
+		F6EE37F221497713008979A5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE37F121497713008979A5 /* Alamofire.framework */; };
+		F6EE37F621497D4C008979A5 /* AppServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE37F521497D4C008979A5 /* AppServiceProvider.swift */; };
+		F6EE37FA2149F6D4008979A5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE37F92149F6D4008979A5 /* RxSwift.framework */; };
+		F6EE37FC2149F6DA008979A5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE37FB2149F6DA008979A5 /* RxCocoa.framework */; };
+		F6EE37FE2149F6DE008979A5 /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE37FD2149F6DE008979A5 /* RxOptional.framework */; };
+		F6EE38002149F6E8008979A5 /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE37FF2149F6E8008979A5 /* RxAlamofire.framework */; };
+		F6EE38032149F7D1008979A5 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6EE38022149F7D1008979A5 /* Configuration.plist */; };
+		F6EE38062149FBDA008979A5 /* ConfigurationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE38052149FBDA008979A5 /* ConfigurationStorage.swift */; };
+		F6EE380A214A038F008979A5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE3809214A038F008979A5 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F687E66F214A08B200171D40 /* ConfigurationStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStorageTests.swift; sourceTree = "<group>"; };
+		F687E671214A0B6500171D40 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		F687E674214A0FEB00171D40 /* ConfigurationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationRepository.swift; sourceTree = "<group>"; };
+		F687E676214A109300171D40 /* ConfigurationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationService.swift; sourceTree = "<group>"; };
 		F6EE37B4214961AC008979A5 /* TWCinema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCinema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EE37B7214961AC008979A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6EE37BE214961AD008979A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +60,15 @@
 		F6EE37D7214961AD008979A5 /* TWCinemaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWCinemaUITests.swift; sourceTree = "<group>"; };
 		F6EE37D9214961AD008979A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6EE37EC21496346008979A5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F6EE37F121497713008979A5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		F6EE37F521497D4C008979A5 /* AppServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServiceProvider.swift; sourceTree = "<group>"; };
+		F6EE37F92149F6D4008979A5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F6EE37FB2149F6DA008979A5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F6EE37FD2149F6DE008979A5 /* RxOptional.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxOptional.framework; path = Carthage/Build/iOS/RxOptional.framework; sourceTree = "<group>"; };
+		F6EE37FF2149F6E8008979A5 /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
+		F6EE38022149F7D1008979A5 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		F6EE38052149FBDA008979A5 /* ConfigurationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStorage.swift; sourceTree = "<group>"; };
+		F6EE3809214A038F008979A5 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +76,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6EE37F221497713008979A5 /* Alamofire.framework in Frameworks */,
+				F6EE38002149F6E8008979A5 /* RxAlamofire.framework in Frameworks */,
+				F6EE37FC2149F6DA008979A5 /* RxCocoa.framework in Frameworks */,
+				F6EE37FE2149F6DE008979A5 /* RxOptional.framework in Frameworks */,
+				F6EE37FA2149F6D4008979A5 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F687E672214A0B6500171D40 /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F687E66E214A089100171D40 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F687E66F214A08B200171D40 /* ConfigurationStorageTests.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		F6EE37AB214961AB008979A5 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +117,7 @@
 				F6EE37CB214961AD008979A5 /* TWCinemaTests */,
 				F6EE37D6214961AD008979A5 /* TWCinemaUITests */,
 				F6EE37B5214961AC008979A5 /* Products */,
+				F6EE37F021497713008979A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,8 +134,11 @@
 		F6EE37B6214961AC008979A5 /* TWCinema */ = {
 			isa = PBXGroup;
 			children = (
+				F6EE3808214A0374008979A5 /* Entities */,
 				F6EE37E9214961EE008979A5 /* Infrastructure */,
+				F6EE37F421497795008979A5 /* Network */,
 				F6EE37EA2149622A008979A5 /* Resources */,
+				F6EE38042149FAC0008979A5 /* Services */,
 				F6EE37EB21496325008979A5 /* UI */,
 			);
 			path = TWCinema;
@@ -103,6 +147,7 @@
 		F6EE37CB214961AD008979A5 /* TWCinemaTests */ = {
 			isa = PBXGroup;
 			children = (
+				F6EE380B214A0749008979A5 /* Services */,
 				F6EE37CC214961AD008979A5 /* TWCinemaTests.swift */,
 				F6EE37CE214961AD008979A5 /* Info.plist */,
 			);
@@ -121,8 +166,10 @@
 		F6EE37E9214961EE008979A5 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				F6EE38022149F7D1008979A5 /* Configuration.plist */,
 				F6EE37C3214961AD008979A5 /* Info.plist */,
 				F6EE37B7214961AC008979A5 /* AppDelegate.swift */,
+				F6EE37F521497D4C008979A5 /* AppServiceProvider.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -143,6 +190,60 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		F6EE37F021497713008979A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F687E671214A0B6500171D40 /* RxTest.framework */,
+				F6EE37FF2149F6E8008979A5 /* RxAlamofire.framework */,
+				F6EE37FD2149F6DE008979A5 /* RxOptional.framework */,
+				F6EE37FB2149F6DA008979A5 /* RxCocoa.framework */,
+				F6EE37F92149F6D4008979A5 /* RxSwift.framework */,
+				F6EE37F121497713008979A5 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6EE37F421497795008979A5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F6EE38042149FAC0008979A5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F6EE380C214A0762008979A5 /* Configuration */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F6EE3808214A0374008979A5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F6EE3809214A038F008979A5 /* Configuration.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F6EE380B214A0749008979A5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F687E66E214A089100171D40 /* Configuration */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F6EE380C214A0762008979A5 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F6EE38052149FBDA008979A5 /* ConfigurationStorage.swift */,
+				F687E674214A0FEB00171D40 /* ConfigurationRepository.swift */,
+				F687E676214A109300171D40 /* ConfigurationService.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +254,8 @@
 				F6EE37B0214961AC008979A5 /* Sources */,
 				F6EE37B1214961AC008979A5 /* Frameworks */,
 				F6EE37B2214961AC008979A5 /* Resources */,
+				F6EE38072149FD0E008979A5 /* Swift Lint */,
+				F6EE37F321497720008979A5 /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +273,7 @@
 				F6EE37C4214961AD008979A5 /* Sources */,
 				F6EE37C5214961AD008979A5 /* Frameworks */,
 				F6EE37C6214961AD008979A5 /* Resources */,
+				F687E673214A0C4700171D40 /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6EE37BF214961AD008979A5 /* Assets.xcassets in Resources */,
+				F6EE38032149F7D1008979A5 /* Configuration.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,12 +372,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F687E673214A0C4700171D40 /* Carthage Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+			);
+			name = "Carthage Copy Frameworks";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		F6EE37F321497720008979A5 /* Carthage Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxOptional.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			name = "Carthage Copy Frameworks";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAlamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxOptional.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		F6EE38072149FD0E008979A5 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F6EE37B0214961AC008979A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6EE37F621497D4C008979A5 /* AppServiceProvider.swift in Sources */,
+				F6EE380A214A038F008979A5 /* Configuration.swift in Sources */,
 				F6EE37B8214961AC008979A5 /* AppDelegate.swift in Sources */,
+				F6EE38062149FBDA008979A5 /* ConfigurationStorage.swift in Sources */,
+				F687E677214A109300171D40 /* ConfigurationService.swift in Sources */,
+				F687E675214A0FEB00171D40 /* ConfigurationRepository.swift in Sources */,
 				F6EE37ED21496346008979A5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F687E670214A08B200171D40 /* ConfigurationStorageTests.swift in Sources */,
 				F6EE37CD214961AD008979A5 /* TWCinemaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +596,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TWCinema/Infrastructure/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -445,6 +617,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TWCinema/Infrastructure/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -463,6 +639,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TWCinemaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -483,6 +663,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TWCinemaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
