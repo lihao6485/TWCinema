@@ -20,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = navigationController
-        navigationController.pushViewController(MainViewController(), animated: false)
+
+        let viewModel = MainViewModel()
+        navigationController.pushViewController(MainViewController(viewModel: viewModel), animated: false)
 
         return true
     }
