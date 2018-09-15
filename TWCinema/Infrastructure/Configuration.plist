@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>apiHost</key>
-	<string>api.themoviedb.org/3</string>
+	<string>api.themoviedb.org</string>
 	<key>apiKey</key>
 	<string>5d0d27b4a1c9f83be70c6d110c345f83</string>
 </dict>

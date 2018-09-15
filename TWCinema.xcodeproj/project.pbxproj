@@ -11,6 +11,13 @@
 		F687E672214A0B6500171D40 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F687E671214A0B6500171D40 /* RxTest.framework */; };
 		F687E675214A0FEB00171D40 /* ConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E674214A0FEB00171D40 /* ConfigurationRepository.swift */; };
 		F687E677214A109300171D40 /* ConfigurationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E676214A109300171D40 /* ConfigurationService.swift */; };
+		F687E683214A171100171D40 /* DiscoverNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E682214A171100171D40 /* DiscoverNetwork.swift */; };
+		F687E685214A1B5900171D40 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E684214A1B5900171D40 /* Movie.swift */; };
+		F687E687214A1D7200171D40 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E686214A1D7200171D40 /* MovieList.swift */; };
+		F687E689214A207700171D40 /* UrlRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E688214A207700171D40 /* UrlRequestBuilder.swift */; };
+		F687E68B214A5B9800171D40 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E68A214A5B9800171D40 /* RequestBuilder.swift */; };
+		F687E68D214A717300171D40 /* DiscoverRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E68C214A717300171D40 /* DiscoverRepository.swift */; };
+		F687E68F214A738800171D40 /* DiscoveryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E68E214A738800171D40 /* DiscoveryService.swift */; };
 		F6EE37B8214961AC008979A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE37B7214961AC008979A5 /* AppDelegate.swift */; };
 		F6EE37BF214961AD008979A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6EE37BE214961AD008979A5 /* Assets.xcassets */; };
 		F6EE37CD214961AD008979A5 /* TWCinemaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE37CC214961AD008979A5 /* TWCinemaTests.swift */; };
@@ -49,6 +56,13 @@
 		F687E671214A0B6500171D40 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		F687E674214A0FEB00171D40 /* ConfigurationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationRepository.swift; sourceTree = "<group>"; };
 		F687E676214A109300171D40 /* ConfigurationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationService.swift; sourceTree = "<group>"; };
+		F687E682214A171100171D40 /* DiscoverNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverNetwork.swift; sourceTree = "<group>"; };
+		F687E684214A1B5900171D40 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		F687E686214A1D7200171D40 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		F687E688214A207700171D40 /* UrlRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequestBuilder.swift; sourceTree = "<group>"; };
+		F687E68A214A5B9800171D40 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		F687E68C214A717300171D40 /* DiscoverRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverRepository.swift; sourceTree = "<group>"; };
+		F687E68E214A738800171D40 /* DiscoveryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryService.swift; sourceTree = "<group>"; };
 		F6EE37B4214961AC008979A5 /* TWCinema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCinema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EE37B7214961AC008979A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6EE37BE214961AD008979A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +124,16 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		F687E678214A14D900171D40 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				F687E682214A171100171D40 /* DiscoverNetwork.swift */,
+				F687E68C214A717300171D40 /* DiscoverRepository.swift */,
+				F687E68E214A738800171D40 /* DiscoveryService.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
 		F6EE37AB214961AB008979A5 = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +193,6 @@
 				F6EE38022149F7D1008979A5 /* Configuration.plist */,
 				F6EE37C3214961AD008979A5 /* Info.plist */,
 				F6EE37B7214961AC008979A5 /* AppDelegate.swift */,
-				F6EE37F521497D4C008979A5 /* AppServiceProvider.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -206,6 +229,8 @@
 		F6EE37F421497795008979A5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F687E688214A207700171D40 /* UrlRequestBuilder.swift */,
+				F687E68A214A5B9800171D40 /* RequestBuilder.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -213,6 +238,8 @@
 		F6EE38042149FAC0008979A5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F6EE37F521497D4C008979A5 /* AppServiceProvider.swift */,
+				F687E678214A14D900171D40 /* Discover */,
 				F6EE380C214A0762008979A5 /* Configuration */,
 			);
 			path = Services;
@@ -222,6 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				F6EE3809214A038F008979A5 /* Configuration.swift */,
+				F687E684214A1B5900171D40 /* Movie.swift */,
+				F687E686214A1D7200171D40 /* MovieList.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -434,12 +463,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F687E68D214A717300171D40 /* DiscoverRepository.swift in Sources */,
 				F6EE37F621497D4C008979A5 /* AppServiceProvider.swift in Sources */,
+				F687E683214A171100171D40 /* DiscoverNetwork.swift in Sources */,
+				F687E685214A1B5900171D40 /* Movie.swift in Sources */,
+				F687E68F214A738800171D40 /* DiscoveryService.swift in Sources */,
+				F687E68B214A5B9800171D40 /* RequestBuilder.swift in Sources */,
 				F6EE380A214A038F008979A5 /* Configuration.swift in Sources */,
 				F6EE37B8214961AC008979A5 /* AppDelegate.swift in Sources */,
+				F687E689214A207700171D40 /* UrlRequestBuilder.swift in Sources */,
 				F6EE38062149FBDA008979A5 /* ConfigurationStorage.swift in Sources */,
 				F687E677214A109300171D40 /* ConfigurationService.swift in Sources */,
 				F687E675214A0FEB00171D40 /* ConfigurationRepository.swift in Sources */,
+				F687E687214A1D7200171D40 /* MovieList.swift in Sources */,
 				F6EE37ED21496346008979A5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,6 +675,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -663,6 +700,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
