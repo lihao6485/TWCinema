@@ -45,7 +45,7 @@ struct DiscoverNetwork {
                     .request()
                     .map { data -> MovieList in
                         let decoder = JSONDecoder()
-
+                        decoder.dateDecodingStrategy = .formatted(DateFormatter.yyyyMMdd)
                         do {
                             let movieList = try decoder.decode(MovieList.self, from: data)
                             return movieList

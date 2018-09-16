@@ -9,7 +9,7 @@
 import XCTest
 
 class TWCinemaUITests: XCTestCase {
-        
+
     override func setUp() {
         super.setUp()
 

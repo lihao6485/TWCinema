@@ -39,6 +39,9 @@
 		F6F6F85B214CC3A300D1769D /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6F85A214CC3A300D1769D /* MainTableViewCell.swift */; };
 		F6F6F85F214D07FB00D1769D /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F6F85E214D07FB00D1769D /* Kingfisher.framework */; };
 		F6F6F861214D088900D1769D /* MainTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6F860214D088900D1769D /* MainTableViewCellViewModel.swift */; };
+		F6F6F866214DE58400D1769D /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6F865214DE58400D1769D /* MovieViewModel.swift */; };
+		F6F6F868214DE59D00D1769D /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6F867214DE59D00D1769D /* MovieViewController.swift */; };
+		F6F6F870214E119200D1769D /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6F86F214E119200D1769D /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		F6F6F85C214D07F100D1769D /* Kingfisher.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Kingfisher.framework.dSYM; path = Carthage/Build/iOS/Kingfisher.framework.dSYM; sourceTree = "<group>"; };
 		F6F6F85E214D07FB00D1769D /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		F6F6F860214D088900D1769D /* MainTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		F6F6F865214DE58400D1769D /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		F6F6F867214DE59D00D1769D /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		F6F6F86F214E119200D1769D /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +180,7 @@
 		F6EE37B6214961AC008979A5 /* TWCinema */ = {
 			isa = PBXGroup;
 			children = (
+				F6F6F86E214E115600D1769D /* Protocols */,
 				F6EE3808214A0374008979A5 /* Entities */,
 				F6EE37E9214961EE008979A5 /* Infrastructure */,
 				F6EE37F421497795008979A5 /* Network */,
@@ -224,6 +231,7 @@
 		F6EE37EB21496325008979A5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F6F6F864214DE56200D1769D /* Movie */,
 				F6F6F858214CC2B100D1769D /* Main */,
 				F6F6F855214CC0A200D1769D /* Styling */,
 				F6F6F850214CB90C00D1769D /* Shared */,
@@ -259,8 +267,8 @@
 			isa = PBXGroup;
 			children = (
 				F6EE37F521497D4C008979A5 /* AppServiceProvider.swift */,
-				F687E678214A14D900171D40 /* Discover */,
 				F6EE380C214A0762008979A5 /* Configuration */,
+				F687E678214A14D900171D40 /* Discover */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -327,6 +335,23 @@
 				F6F6F860214D088900D1769D /* MainTableViewCellViewModel.swift */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		F6F6F864214DE56200D1769D /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				F6F6F865214DE58400D1769D /* MovieViewModel.swift */,
+				F6F6F867214DE59D00D1769D /* MovieViewController.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		F6F6F86E214E115600D1769D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F6F6F86F214E119200D1769D /* DateFormatter.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,13 +551,16 @@
 				F687E683214A171100171D40 /* DiscoverNetwork.swift in Sources */,
 				F687E685214A1B5900171D40 /* Movie.swift in Sources */,
 				F6F6F85B214CC3A300D1769D /* MainTableViewCell.swift in Sources */,
+				F6F6F866214DE58400D1769D /* MovieViewModel.swift in Sources */,
 				F687E68F214A738800171D40 /* DiscoveryService.swift in Sources */,
+				F6F6F870214E119200D1769D /* DateFormatter.swift in Sources */,
 				F6F6F861214D088900D1769D /* MainTableViewCellViewModel.swift in Sources */,
 				F6F6F84F214CB77D00D1769D /* MainViewModel.swift in Sources */,
 				F6F6F852214CB92200D1769D /* ViewType.swift in Sources */,
 				F687E68B214A5B9800171D40 /* RequestBuilder.swift in Sources */,
 				F6EE380A214A038F008979A5 /* Configuration.swift in Sources */,
 				F6EE37B8214961AC008979A5 /* AppDelegate.swift in Sources */,
+				F6F6F868214DE59D00D1769D /* MovieViewController.swift in Sources */,
 				F6F6F854214CBC1400D1769D /* ViewModelType.swift in Sources */,
 				F687E689214A207700171D40 /* UrlRequestBuilder.swift in Sources */,
 				F6EE38062149FBDA008979A5 /* ConfigurationStorage.swift in Sources */,

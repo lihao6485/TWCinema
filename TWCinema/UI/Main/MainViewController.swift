@@ -115,6 +115,14 @@ class MainViewController: UIViewController, ViewType {
             }
             .disposed(by: disposeBag)
 
+        tableView.rx.modelSelected(Movie.self).asObservable()
+            .subscribe(onNext: { [weak self] movie in
+                let movieViewModel = MovieViewModel(movie: movie)
+                let movieViewController = MovieViewController(viewModel: movieViewModel)
+
+                self?.navigationController?.pushViewController(movieViewController, animated: true)
+            })
+            .disposed(by: disposeBag)
     }
 
 }

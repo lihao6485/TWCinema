@@ -81,7 +81,7 @@ class MainTableViewCell: UITableViewCell, ViewType {
     func bind(movie: Movie) {
         let output = viewModel.transform(input: .init(movie: movie))
         movieTitle.text = output.movieTitle
-        popularityLabel.text = "\(output.popularity)"
+        popularityLabel.text = "Popularity: \(output.popularity)"
 
         output.posterURL
             .drive(onNext: { [weak self] url in
