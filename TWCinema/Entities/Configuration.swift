@@ -11,4 +11,5 @@ import Foundation
 struct Configuration: Codable {
     public let apiHost: String
     public let apiKey: String
+    public let imageHost: String
 }

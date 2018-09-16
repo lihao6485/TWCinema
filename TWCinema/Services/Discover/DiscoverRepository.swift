@@ -17,7 +17,7 @@ final class DiscoverRepository {
         self.network = network
     }
 
-    func discoverMovieList() -> Single<MovieList> {
-        return network.makeDiscoverRequest()
+    func discoverMovieList(with page: Int) -> Single<MovieList> {
+        return network.makeDiscoverRequest(with: page)
     }
 }

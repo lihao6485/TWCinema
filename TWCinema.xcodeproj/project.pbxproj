@@ -37,6 +37,8 @@
 		F6F6F854214CBC1400D1769D /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6F853214CBC1400D1769D /* ViewModelType.swift */; };
 		F6F6F857214CC0AD00D1769D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6F856214CC0AD00D1769D /* Color.swift */; };
 		F6F6F85B214CC3A300D1769D /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6F85A214CC3A300D1769D /* MainTableViewCell.swift */; };
+		F6F6F85F214D07FB00D1769D /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F6F85E214D07FB00D1769D /* Kingfisher.framework */; };
+		F6F6F861214D088900D1769D /* MainTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6F860214D088900D1769D /* MainTableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,9 @@
 		F6F6F853214CBC1400D1769D /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		F6F6F856214CC0AD00D1769D /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F6F6F85A214CC3A300D1769D /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		F6F6F85C214D07F100D1769D /* Kingfisher.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Kingfisher.framework.dSYM; path = Carthage/Build/iOS/Kingfisher.framework.dSYM; sourceTree = "<group>"; };
+		F6F6F85E214D07FB00D1769D /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		F6F6F860214D088900D1769D /* MainTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6EE37F221497713008979A5 /* Alamofire.framework in Frameworks */,
+				F6F6F85F214D07FB00D1769D /* Kingfisher.framework in Frameworks */,
 				F6EE38002149F6E8008979A5 /* RxAlamofire.framework in Frameworks */,
 				F6EE37FC2149F6DA008979A5 /* RxCocoa.framework in Frameworks */,
 				F6EE37FE2149F6DE008979A5 /* RxOptional.framework in Frameworks */,
@@ -228,6 +234,8 @@
 		F6EE37F021497713008979A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6F6F85E214D07FB00D1769D /* Kingfisher.framework */,
+				F6F6F85C214D07F100D1769D /* Kingfisher.framework.dSYM */,
 				F687E671214A0B6500171D40 /* RxTest.framework */,
 				F6EE37FF2149F6E8008979A5 /* RxAlamofire.framework */,
 				F6EE37FD2149F6DE008979A5 /* RxOptional.framework */,
@@ -316,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				F6F6F85A214CC3A300D1769D /* MainTableViewCell.swift */,
+				F6F6F860214D088900D1769D /* MainTableViewCellViewModel.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -476,6 +485,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxOptional.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -484,6 +494,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxOptional.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -516,6 +527,7 @@
 				F687E685214A1B5900171D40 /* Movie.swift in Sources */,
 				F6F6F85B214CC3A300D1769D /* MainTableViewCell.swift in Sources */,
 				F687E68F214A738800171D40 /* DiscoveryService.swift in Sources */,
+				F6F6F861214D088900D1769D /* MainTableViewCellViewModel.swift in Sources */,
 				F6F6F84F214CB77D00D1769D /* MainViewModel.swift in Sources */,
 				F6F6F852214CB92200D1769D /* ViewType.swift in Sources */,
 				F687E68B214A5B9800171D40 /* RequestBuilder.swift in Sources */,

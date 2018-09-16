@@ -27,19 +27,19 @@ struct DiscoverNetwork {
         self.configurationStorage = configurationStorage
     }
 
-    private func buildDiscoverURLRequest() -> Single<URLRequest> {
+    private func buildDiscoverURLRequest(with page: Int) -> Single<URLRequest> {
         return configurationStorage.configuration()
             .flatMap { configuration -> Single<URLRequest> in
                 return UrlRequestBuilder(httpMethod: .get, scheme: .https, host: configuration.apiHost,
                                          path: Path.discover.rawValue,
                                          query: [URLQueryItem(name: "api_key", value: configuration.apiKey),
-                                                 URLQueryItem(name: "page", value: "1")])
+                                                 URLQueryItem(name: "page", value: "\(page)")])
                     .buildUrlRequest()
             }
     }
 
-    func makeDiscoverRequest() -> Single<MovieList> {
-        return buildDiscoverURLRequest()
+    func makeDiscoverRequest(with page: Int) -> Single<MovieList> {
+        return buildDiscoverURLRequest(with: page)
             .flatMap { urlRequest -> Single<MovieList> in
                 return RequestBuilder(sessionManager: self.sessionManager, urlRequest: urlRequest)
                     .request()

@@ -16,7 +16,7 @@ struct DiscoverService {
         self.repository = repository
     }
 
-    func discoverMovieList() -> Single<MovieList> {
-        return repository.discoverMovieList()
+    func discoverMovieList(with page: Int) -> Single<MovieList> {
+        return repository.discoverMovieList(with: page)
     }
 }

@@ -8,8 +8,7 @@
 
 import UIKit
 import RxSwift
-import Alamofire
-import RxAlamofire
+import RxCocoa
 
 class MainViewController: UIViewController, ViewType {
 
@@ -19,6 +18,8 @@ class MainViewController: UIViewController, ViewType {
 
     var disposeBag: DisposeBag!
 
+    private var movieListArraySubject = BehaviorRelay<[MovieList]>(value: [])
+
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,6 +27,7 @@ class MainViewController: UIViewController, ViewType {
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.identifier)
 
         return tableView
     }()
@@ -34,10 +36,30 @@ class MainViewController: UIViewController, ViewType {
         return UIRefreshControl()
     }()
 
+    private lazy var footerView: UIView = {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
+        let loadingIndicator = UIActivityIndicatorView()
+
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        loadingIndicator.startAnimating()
+
+        [loadingIndicator].forEach(footerView.addSubview)
+
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: footerView.centerXAnchor),
+            loadingIndicator.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 10),
+            loadingIndicator.widthAnchor.constraint(equalToConstant: 40),
+            loadingIndicator.heightAnchor.constraint(equalToConstant: 40)
+            ])
+
+        return footerView
+    }()
+
     func layout() {
         navigationItem.title = "Main"
 
         tableView.refreshControl = refreshControl
+        tableView.tableFooterView = footerView
 
         [tableView].forEach(view.addSubview)
 
@@ -50,6 +72,49 @@ class MainViewController: UIViewController, ViewType {
     }
 
     func bind() {
+        let fetchNextPageObservable = tableView.rx
+            .contentOffset
+            .asObservable()
+            .filter { $0.y + self.tableView.frame.height + 20 > self.tableView.contentSize.height }
+            .withLatestFrom(movieListArraySubject.asObservable())
+            .map { $0.last?.page ?? 0 + 1 }
+
+        let refreshControlObservable = refreshControl.rx.controlEvent(.valueChanged).asObservable()
+
+        let output = viewModel.transform(input: .init(fetchNextPageObservable: fetchNextPageObservable,
+                                                      refreshControlObservable: refreshControlObservable))
+
+        output.nextMovieListDriver
+            .filter { !$0.results.isEmpty }
+            .drive(onNext: { [weak self] list in
+                guard let `self` = self else { return }
+                self.movieListArraySubject.accept(self.movieListArraySubject.value + [list])
+            })
+            .disposed(by: disposeBag)
+
+        output.refreshControlDriver
+            .drive(onNext: { [weak self] list in
+                guard let `self` = self else { return }
+                self.movieListArraySubject.accept([list])
+                self.refreshControl.endRefreshing()
+            })
+            .disposed(by: disposeBag)
+
+        movieListArraySubject.asDriver()
+            .map { movieListArray -> [Movie] in
+                return movieListArray.flatMap { $0.results }
+            }
+            .drive(tableView.rx.items(cellIdentifier: MainTableViewCell.identifier)) { _, model, cell in
+                guard let mainCell = cell as? MainTableViewCell else {
+                    return
+                }
+
+                mainCell.viewModel = MainTableViewCellViewModel()
+                mainCell.layout()
+                mainCell.bind(movie: model)
+            }
+            .disposed(by: disposeBag)
+
     }
 
 }
