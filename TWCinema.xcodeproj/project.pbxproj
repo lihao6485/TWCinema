@@ -18,6 +18,8 @@
 		F687E68B214A5B9800171D40 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E68A214A5B9800171D40 /* RequestBuilder.swift */; };
 		F687E68D214A717300171D40 /* DiscoverRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E68C214A717300171D40 /* DiscoverRepository.swift */; };
 		F687E68F214A738800171D40 /* DiscoveryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E68E214A738800171D40 /* DiscoveryService.swift */; };
+		F6927C38215140BB004B0A6D /* DiscoverNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6927C37215140BB004B0A6D /* DiscoverNetworkTests.swift */; };
+		F6927C3B21514DB3004B0A6D /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6927C3A21514DB3004B0A6D /* ModelTests.swift */; };
 		F6EE37B8214961AC008979A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE37B7214961AC008979A5 /* AppDelegate.swift */; };
 		F6EE37BF214961AD008979A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6EE37BE214961AD008979A5 /* Assets.xcassets */; };
 		F6EE37CD214961AD008979A5 /* TWCinemaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE37CC214961AD008979A5 /* TWCinemaTests.swift */; };
@@ -73,6 +75,8 @@
 		F687E68A214A5B9800171D40 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		F687E68C214A717300171D40 /* DiscoverRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverRepository.swift; sourceTree = "<group>"; };
 		F687E68E214A738800171D40 /* DiscoveryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryService.swift; sourceTree = "<group>"; };
+		F6927C37215140BB004B0A6D /* DiscoverNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverNetworkTests.swift; sourceTree = "<group>"; };
+		F6927C3A21514DB3004B0A6D /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		F6EE37B4214961AC008979A5 /* TWCinema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCinema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EE37B7214961AC008979A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6EE37BE214961AD008979A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,6 +160,22 @@
 			path = Discover;
 			sourceTree = "<group>";
 		};
+		F6927C3621513DF2004B0A6D /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				F6927C37215140BB004B0A6D /* DiscoverNetworkTests.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		F6927C3921514D94004B0A6D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F6927C3A21514DB3004B0A6D /* ModelTests.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		F6EE37AB214961AB008979A5 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +214,7 @@
 		F6EE37CB214961AD008979A5 /* TWCinemaTests */ = {
 			isa = PBXGroup;
 			children = (
+				F6927C3921514D94004B0A6D /* Entities */,
 				F6EE380B214A0749008979A5 /* Services */,
 				F6EE37CC214961AD008979A5 /* TWCinemaTests.swift */,
 				F6EE37CE214961AD008979A5 /* Info.plist */,
@@ -286,6 +307,7 @@
 		F6EE380B214A0749008979A5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F6927C3621513DF2004B0A6D /* Discover */,
 				F687E66E214A089100171D40 /* Configuration */,
 			);
 			path = Services;
@@ -577,7 +599,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F687E670214A08B200171D40 /* ConfigurationStorageTests.swift in Sources */,
+				F6927C38215140BB004B0A6D /* DiscoverNetworkTests.swift in Sources */,
 				F6EE37CD214961AD008979A5 /* TWCinemaTests.swift in Sources */,
+				F6927C3B21514DB3004B0A6D /* ModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -146,6 +146,7 @@ class MovieViewController: UIViewController, ViewType {
         return bookNowButton
     }()
 
+    //swiftlint:disable function_body_length
     func layout() {
         navigationItem.title = "Movie"
 

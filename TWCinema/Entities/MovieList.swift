@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct MovieList: Codable {
+public struct MovieList: Codable, Equatable {
     let page: Int
     let results: [Movie]
     let totalResults: Int

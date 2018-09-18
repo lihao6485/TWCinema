@@ -38,25 +38,41 @@ class MainViewController: UIViewController, ViewType {
 
     private lazy var footerView: UIView = {
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
-        let loadingIndicator = UIActivityIndicatorView()
+        return footerView
+    }()
 
+    private lazy var loadingIndicator: UIActivityIndicatorView = {
+        let loadingIndicator = UIActivityIndicatorView()
         loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
         loadingIndicator.startAnimating()
 
-        [loadingIndicator].forEach(footerView.addSubview)
+        return loadingIndicator
+    }()
+
+    private lazy var errorLabel: UILabel = {
+        let errorLabel = UILabel()
+        errorLabel.translatesAutoresizingMaskIntoConstraints = false
+        errorLabel.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        errorLabel.textColor = UIColor.white
+        errorLabel.numberOfLines = 0
+
+        return errorLabel
+    }()
+
+    func layout() {
+        navigationItem.title = "Main"
+
+        [loadingIndicator, errorLabel].forEach(footerView.addSubview)
 
         NSLayoutConstraint.activate([
             loadingIndicator.centerXAnchor.constraint(equalTo: footerView.centerXAnchor),
             loadingIndicator.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 10),
             loadingIndicator.widthAnchor.constraint(equalToConstant: 40),
-            loadingIndicator.heightAnchor.constraint(equalToConstant: 40)
+            loadingIndicator.heightAnchor.constraint(equalToConstant: 40),
+
+            errorLabel.centerXAnchor.constraint(equalTo: footerView.centerXAnchor),
+            errorLabel.topAnchor.constraint(equalTo: loadingIndicator.bottomAnchor, constant: 16)
             ])
-
-        return footerView
-    }()
-
-    func layout() {
-        navigationItem.title = "Main"
 
         tableView.refreshControl = refreshControl
         tableView.tableFooterView = footerView
@@ -71,17 +87,22 @@ class MainViewController: UIViewController, ViewType {
             ])
     }
 
+    //swiftlint:disable function_body_length
     func bind() {
-        let fetchNextPageObservable = tableView.rx
+        let contentOffsetDriver = tableView.rx
             .contentOffset
             .asObservable()
+            .asDriver(onErrorJustReturn: .zero)
+
+        let fetchNextPageDriver = contentOffsetDriver
             .filter { $0.y + self.tableView.frame.height + 20 > self.tableView.contentSize.height }
-            .withLatestFrom(movieListArraySubject.asObservable())
-            .map { $0.last?.page ?? 0 + 1 }
+            .map { [weak self] _ -> Int in
+                self?.loadingIndicator.startAnimating()
+                return (self?.movieListArraySubject.value.last?.page ?? 0) + 1
+            }
 
         let refreshControlObservable = refreshControl.rx.controlEvent(.valueChanged).asObservable()
-
-        let output = viewModel.transform(input: .init(fetchNextPageObservable: fetchNextPageObservable,
+        let output = viewModel.transform(input: .init(fetchNextPageObservable: fetchNextPageDriver,
                                                       refreshControlObservable: refreshControlObservable))
 
         output.nextMovieListDriver
@@ -97,6 +118,13 @@ class MainViewController: UIViewController, ViewType {
                 guard let `self` = self else { return }
                 self.movieListArraySubject.accept([list])
                 self.refreshControl.endRefreshing()
+            })
+            .disposed(by: disposeBag)
+
+        output.errorDriver
+            .drive(onNext: { [weak self] error in
+                self?.loadingIndicator.stopAnimating()
+                self?.errorLabel.text = error?.localizedDescription
             })
             .disposed(by: disposeBag)
 
