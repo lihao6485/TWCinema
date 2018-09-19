@@ -26,7 +26,7 @@ class MainViewController: UIViewController, ViewType {
         tableView.backgroundColor = Color.homeCellBg
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 100
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.identifier)
 
         return tableView

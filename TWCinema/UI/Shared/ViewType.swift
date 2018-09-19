@@ -34,7 +34,7 @@ extension ViewType where Self: UIViewController, Self.ViewModel: ViewModelType {
 
 extension ViewType where Self: UITableViewCell {
 
-    init(viewModel: ViewModel, style: UITableViewCellStyle, reuseIdentifier: String?) {
+    init(viewModel: ViewModel, style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         self.init(style: style, reuseIdentifier: reuseIdentifier)
         self.disposeBag = DisposeBag()
         self.viewModel = viewModel
