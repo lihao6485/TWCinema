@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-import RxAlamofire
 import RxSwift
 
 public enum RequestBuilderError: Error {
@@ -25,13 +24,21 @@ struct RequestBuilder {
     }
 
     public func request() -> Observable<Data> {
-        return sessionManager.rx.request(urlRequest: urlRequest)
-            .flatMap {
-                $0
-                .validate(statusCode: 200..<300)
-                .validate(contentType: ["application/json"])
-                .rx
-                .data()
+        return Observable.deferred {
+            return Observable.create { observer -> Disposable in
+                let request = self.sessionManager.request(self.urlRequest)
+                    .responseData(completionHandler: { response in
+                        switch response.result {
+                        case .success(let value):
+                            observer.on(.next(value))
+                            observer.on(.completed)
+                        case .failure(let error):
+                            observer.on(.error(error))
+                        }
+                    })
+
+                return Disposables.create { request.cancel() }
             }
+        }
     }
 }

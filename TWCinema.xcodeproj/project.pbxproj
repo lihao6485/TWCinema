@@ -30,7 +30,6 @@
 		F6EE37FA2149F6D4008979A5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE37F92149F6D4008979A5 /* RxSwift.framework */; };
 		F6EE37FC2149F6DA008979A5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE37FB2149F6DA008979A5 /* RxCocoa.framework */; };
 		F6EE37FE2149F6DE008979A5 /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE37FD2149F6DE008979A5 /* RxOptional.framework */; };
-		F6EE38002149F6E8008979A5 /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EE37FF2149F6E8008979A5 /* RxAlamofire.framework */; };
 		F6EE38032149F7D1008979A5 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6EE38022149F7D1008979A5 /* Configuration.plist */; };
 		F6EE38062149FBDA008979A5 /* ConfigurationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE38052149FBDA008979A5 /* ConfigurationStorage.swift */; };
 		F6EE380A214A038F008979A5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE3809214A038F008979A5 /* Configuration.swift */; };
@@ -117,7 +116,6 @@
 			files = (
 				F6EE37F221497713008979A5 /* Alamofire.framework in Frameworks */,
 				F6F6F85F214D07FB00D1769D /* Kingfisher.framework in Frameworks */,
-				F6EE38002149F6E8008979A5 /* RxAlamofire.framework in Frameworks */,
 				F6EE37FC2149F6DA008979A5 /* RxCocoa.framework in Frameworks */,
 				F6EE37FE2149F6DE008979A5 /* RxOptional.framework in Frameworks */,
 				F6EE37FA2149F6D4008979A5 /* RxSwift.framework in Frameworks */,
@@ -528,7 +526,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxOptional.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
@@ -537,7 +534,6 @@
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAlamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxOptional.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
@@ -545,7 +541,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		F6EE38072149FD0E008979A5 /* Swift Lint */ = {
 			isa = PBXShellScriptBuildPhase;
